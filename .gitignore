@@ -1,0 +1,13 @@
+venvtest/*
+*.out
+*.err
+*.png
+*.jpg
+*.pyc
+exp/*
+datasets/*
+*/__pycache__/*
+tmp/*
+job/*
+utils/other_datasets/ImageNet_LT/*
+torchhub/*
