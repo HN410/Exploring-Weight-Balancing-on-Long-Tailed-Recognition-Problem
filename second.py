@@ -64,7 +64,9 @@ parser.add_argument("--description", type=str, default="")
 parser.add_argument("--retrain", action="store_true")
 parser.add_argument("--json_path", type=str, default="")
 p_args = parser.parse_args()
-do_retrain = p_args.retrain
+print(p_args.retrain)
+print(type(p_args.retrain))
+do_retrain =  p_args.retrain
 
 
 args: BaseArgs = BaseArgs.load(p_args.json_path) if p_args.json_path else BaseArgs()

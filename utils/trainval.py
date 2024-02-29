@@ -90,7 +90,7 @@ def check_statistics_per_epoch(writer: SummaryWriter, model: MyModel, epoch: int
         
     
 LOG_ADDITIONAL_RES = False
-LOG_FDR = True
+LOG_FDR = False
 
 CHECK_EPOCH_KEY = "epoch"
 CHECK_MODEL_KEY = "model"

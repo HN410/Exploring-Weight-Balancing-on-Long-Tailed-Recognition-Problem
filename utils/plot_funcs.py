@@ -198,7 +198,6 @@ def plot_per_class_accuracy_by_models_dict(models_dict, dataloaders, label_names
 
 def plot_per_class_accuracy_with_naive(conf_mat, label_names_list, img_num_per_cls, args: BaseArgs,
       output_image: bool = False):
-    exp_names_list = [args.exp_name, "naive"]
     result_dict = {}
     result_dict[args.exp_name] = conf_mat
     
@@ -208,8 +207,11 @@ def plot_per_class_accuracy_with_naive(conf_mat, label_names_list, img_num_per_c
         naive_args.model.name = args.model.name
         naive_args.project_name = "first"
         naive_args.exp_name = "naive"
-        result_dict["naive"] = np.load(os.path.join(get_work_dir_path(naive_args), CONFMAT_FILE_NAME))
-    
+        naive_path = os.path.join(get_work_dir_path(naive_args), CONFMAT_FILE_NAME)
+        if os.path.exists(naive_path):
+            result_dict["naive"] = np.load(naive_path)
+            
+    exp_names_list = [key for key in result_dict]    
     result_dict = {key: get_per_class_acc(mat, n_classes= args.data.n_classes) for key, mat in result_dict.items()}
     
     return plot_per_class_accuracy(label_names_list, exp_names_list, result_dict, img_num_per_cls, args, output_image=output_image)

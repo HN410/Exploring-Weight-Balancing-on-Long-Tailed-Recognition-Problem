@@ -9,5 +9,6 @@ datasets/*
 */__pycache__/*
 tmp/*
 job/*
+logs/*
 utils/other_datasets/ImageNet_LT/*
 torchhub/*

@@ -1,0 +1,42 @@
+{
+  "exp_name": "naive",
+  "project_name": "first",
+  "seeds": 0,
+  "description": "新版",
+  "save_features": false,
+  "param_search": false,
+  "param_search_id": 0,
+  "data": {
+    "name": "Cifar10",
+    "imb_type": "exp",
+    "imb_factor": 0.01,
+    "n_classes": 10,
+    "batch_size": 64
+  },
+  "model": {
+    "name": "ResNet34",
+    "is_pretrained": false,
+    "load_only_representation": false,
+    "use_etf": false,
+    "normalize_feature": false,
+    "etf_norm_rate": 1,
+    "logit_adjustment_tau": 0.0,
+    "logit_adjustment_for_training": false,
+    "logit_normalization": false,
+    "use_additive_logit_adjustment": true,
+    "activation_type": "relu",
+    "activation_param": 0.03,
+    "use_feature_bias": false,
+    "encoder_num_layers": 34
+  },
+  "optim": {
+    "total_epoch_num": 320,
+    "loss_type": "CE",
+    "weight_decay": 0,
+    "weight_decay_conv": true,
+    "weight_decay_bn": true,
+    "norm_type": "none",
+    "train_bn_bias": true,
+    "base_lr": 0.01
+  }
+}

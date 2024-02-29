@@ -1,0 +1,32 @@
+{
+  "exp_name": "naive",
+  "project_name": "first",
+  "seeds": 0,
+  "description": "新版",
+  "save_features": false,
+  "data": {
+    "name": "Cifar100",
+    "imb_type": "exp",
+    "imb_factor": 0.01,
+    "n_classes": 100,
+    "batch_size": 64
+  },
+  "model": {
+    "name": "ResNet34",
+    "is_pretrained": false,
+    "load_only_representation": false,
+    "use_etf": false,
+    "normalize_feature": false,
+    "etf_norm_rate": 1,
+    "logit_adjustment_tau": 0.0,
+    "logit_normalization": false,
+    "encoder_num_layers": 34
+  },
+  "optim": {
+    "total_epoch_num": 320,
+    "loss_type": "CE",
+    "weight_decay": 0,
+    "norm_type": "none",
+    "base_lr": 0.01
+  }
+}
