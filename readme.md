@@ -9,8 +9,9 @@ This repository comprises code for LTR. Primarily, one can conduct training (or 
 - first.py: Code for the initial stage of training.
 - second.py: Code for the subsequent stage of training or logit adjustment.
 
+This repository is based on the [paper](https://arxiv.org/abs/2203.14197) and [repository](https://github.com/ShadeAlsha/LTR-weight-balancing) of Alshammari et al. Please refer to them as well.
 
-## How to execute
+## How to Execute
 1. Setup environment. Refer to [Requirement](#Requirement).
 2. Prepare datasets. If you want to experiment with CIFAR, this program automatically download them to the `datasets` directory. 
 If you want to use ImageNet or other datasets, place them in the `datasets` folder beforehand. The location can be modified in `utils/conf.py`.
