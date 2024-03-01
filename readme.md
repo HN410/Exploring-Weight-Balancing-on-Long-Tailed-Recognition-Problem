@@ -6,8 +6,8 @@
 ## Code Description
 This repository comprises code for LTR. Primarily, one can conduct training (or logit adjustment) and assess the model by executing first.py and second.py at the top level.
 
-- first.py: Code for the initial stage of training.
-- second.py: Code for the subsequent stage of training or logit adjustment.
+- `first.py`: Code for the initial stage of training.
+- `second.py`: Code for the subsequent stage of training or logit adjustment.
 
 This repository is based on the [paper](https://arxiv.org/abs/2203.14197) and [repository](https://github.com/ShadeAlsha/LTR-weight-balancing) of Alshammari et al. Please refer to them as well.
 
